@@ -1,0 +1,32 @@
+.hollywood-bg {
+  background: 
+    /* Theater curtain effect */
+    linear-gradient(90deg, 
+      #8B0000 0%, 
+      #B22222 10%, 
+      #8B0000 20%, 
+      #600000 30%,
+      #8B0000 40%,
+      #B22222 50%,
+      #8B0000 60%,
+      #600000 70%,
+      #8B0000 80%,
+      #B22222 90%,
+      #8B0000 100%
+    ),
+    /* Dark stage floor */
+    linear-gradient(180deg, 
+      transparent 70%, 
+      #1a1a1a 100%
+    );
+  
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  background-blend-mode: overlay, overlay;
+}

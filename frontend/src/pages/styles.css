@@ -1,0 +1,202 @@
+/* Hollywood Glamour - Updated Version */
+.hollywood-bg {
+  background: 
+    linear-gradient(135deg, 
+      #0c0c0c 0%,
+      #1a1a2e 25%,
+      #16213e 50%,
+      #1a1a2e 75%,
+      #0c0c0c 100%
+    );
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.hollywood-bg::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%),
+    radial-gradient(circle at 20% 80%, rgba(255, 69, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(30, 144, 255, 0.08) 0%, transparent 50%);
+  animation: shimmer 20s infinite linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content should be above the background effects */
+.hollywood-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes shimmer {
+  0% { 
+    transform: rotate(0deg) scale(1); 
+    opacity: 0.8;
+  }
+  50% { 
+    transform: rotate(180deg) scale(1.1);
+    opacity: 1;
+  }
+  100% { 
+    transform: rotate(360deg) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Enhanced Spotlight Effect */
+.spotlight-bg {
+  background: 
+    radial-gradient(ellipse at center, 
+      rgba(40, 40, 40, 0.9) 0%,
+      rgba(20, 20, 20, 0.95) 50%,
+      rgba(10, 10, 10, 1) 100%
+    ),
+    radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 69, 0, 0.1) 0%, transparent 40%);
+  background-attachment: fixed;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+/* Additional Hollywood-style elements */
+.star-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star-effect::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
+    radial-gradient(2px 2px at 40% 70%, rgba(255, 255, 255, 0.6) 50%, transparent 100%),
+    radial-gradient(1px 1px at 60% 20%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
+    radial-gradient(1px 1px at 80% 50%, rgba(255, 255, 255, 0.6) 50%, transparent 100%),
+    radial-gradient(2px 2px at 30% 80%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  background-repeat: repeat;
+  animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Hollywood Text Styles */
+.hollywood-text {
+  background: linear-gradient(45deg, #ffd700, #ff8c00, #ffd700);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s ease-in-out infinite alternate;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+  100% {
+    background-position: 100% 50%;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+  }
+}
+
+/* Glamour Button Styles */
+.glamour-btn {
+  background: linear-gradient(45deg, #ffd700, #ff8c00);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.glamour-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+  background: linear-gradient(45deg, #ff8c00, #ffd700);
+}
+
+.glamour-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.glamour-btn:hover::before {
+  left: 100%;
+}
+
+/* Text styles */
+p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hollywood-bg::before {
+    animation-duration: 30s;
+  }
+  
+  .spotlight-bg {
+    background-attachment: scroll;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .hollywood-text {
+    font-size: 2rem;
+  }
+  
+  .hollywood-content {
+    padding: 1rem;
+  }
+}
