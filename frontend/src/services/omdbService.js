@@ -1,4 +1,4 @@
-const OMDB_API_KEY = 'f4c815f9'; // Replace with your OMDb API key
+const OMDB_API_KEY = '17d624ea'; // Replace with your OMDb API key
 const OMDB_BASE_URL = 'https://www.omdbapi.com/';
 
 // Search movies by title
